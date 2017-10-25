@@ -1,0 +1,25 @@
+<table class="chart">
+    <tr class="chart__header">
+        <th></th>
+        <th class="chart__header_title">Услуг</th>  
+    </tr>
+    <tr class="chart__emty">
+            <td> </td>
+            <td> </td>  
+    </tr>
+    <tr class="chart__body" *ngFor="let item of model">
+            <td class="chart__body_name"> 
+                    <div class="chart__body_name_text"> {{item.name}} </div>
+                    <div class="chart__body_graph size_{{item.count}}" [ngClass]="item.color"></div>
+            </td>
+            <td class="chart__body_count"> {{item.count}}</td>  
+    </tr>
+    <tr class="chart__emty">
+            <td> </td>
+            <td> </td>  
+    </tr>
+    <tr class="chart__footer">
+            <td class="chart__footer_text"> Всего </td>
+            <td class="chart__footer_text chart__footer_count"> {{count}} </td>  
+    </tr>
+</table>

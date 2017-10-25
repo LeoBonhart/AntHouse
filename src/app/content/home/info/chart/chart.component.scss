@@ -1,0 +1,80 @@
+@import "~sass/mixins.scss";
+
+.chart{
+    $ml:130px;
+    margin-left:$ml; 
+    width: calc(100% - #{$ml});
+    text-align: left;
+    .chart__header{
+        border-bottom: 1px solid $separator-color;
+        .chart__header_title{
+            @include title-text(normal,13px);
+            padding-bottom: 5px; 
+            width: 66px;
+        }        
+    }
+    .chart__body{
+        td{
+            height: 25px;
+            
+        }
+        .chart__body_name{            
+            padding-left:7px;
+            position: relative;
+            
+            border-left:1px solid rgba(0,0,0,0.5);  
+            .chart__body_name_text{
+                @include site-text();
+                z-index: 10;
+                position: relative;
+            }
+            .chart__body_graph{
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 1px;
+                bottom: 1px;
+                background-color: red;
+                border-top-right-radius:3px;
+                border-bottom-right-radius:3px;                 
+                z-index: 1;
+                opacity: 0.4;
+                &.size_11{
+                    width: 87%;
+                }
+                &.size_3{
+                    width: 21%;
+                }
+                &.size_1{
+                    width: 14%;
+                }
+                &.green{
+                    background-color: $graph-green;
+                }
+                &.blue{
+                    background-color: $graph-blue;
+                }
+                
+            } 
+        }
+        .chart__body_count{
+            @include site-text(bold);
+            padding-left:10px;             
+        }
+        
+    }
+    .chart__footer{
+        border-top: 1px solid $separator-color;
+        .chart__footer_text{
+            padding-top: 13px; 
+            @include title-text();
+        }
+        .chart__footer_count{
+            padding-left:7px; 
+        }
+    }
+    .chart__emty{
+        height: 15px;
+    }
+}
+

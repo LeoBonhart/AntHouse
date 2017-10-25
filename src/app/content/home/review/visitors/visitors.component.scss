@@ -1,0 +1,62 @@
+@import "~sass/mixins.scss";
+
+
+.visitors{
+    margin-bottom: 15px;
+    .visitors__name{
+        @include site-text(bold);
+    }
+    .visitors__date{
+        @include sub-text(11px);
+        margin-left: 5px;
+    }
+    .visitors__text {
+        position: relative;
+        visibility: visible;
+        opacity: .9;  
+        display: block;
+        text-align: left;
+        text-decoration: none;
+        font-weight: bold;
+        padding: {
+            top:15px;
+            right:  15px;
+            bottom: 10px;
+            left:  20px;
+        }
+        @include site-text( normal,  14px, 1.429);
+        background-color: $msg-bg-color;
+        border: 1px solid $msg-border-color;
+        border-radius: 0px;
+        z-index: 10;
+        margin-top: 8px;
+        box-shadow: $msg-shadow;    
+        
+        .visitors__text_angle {
+            position: absolute;
+            border-left-width: 0;
+            line-height: 0;
+            left: 22px;
+            top: -10px;
+            border-right: solid 10px transparent;
+            border-bottom: solid 10px $msg-border-color;
+            &:after{
+                position: absolute;
+                border-left-width: 0;
+                line-height: 0;
+                left: 1px;
+                top: 3px;
+                border-right: solid 9px transparent;
+                border-bottom: solid 9px $msg-bg-color;
+                content: '';
+            }
+          }
+      }
+}
+  
+  
+   
+  
+ 
+  
+  

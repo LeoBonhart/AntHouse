@@ -1,0 +1,44 @@
+@import "~sass/mixins.scss";
+
+.user{
+    position: relative;
+
+    .user__image{
+        @include img-in-box(120px, 50%,0,-23%, 18%);
+        margin-top:16px;
+        //margin-left:21px;
+        z-index: 10;
+    }
+    .user__title{
+        margin-top: 22px;
+        margin-left: 10px;
+        top:0;
+        .user__title_name{
+            @include title-text();
+            display: block;            
+        }
+        .user__title_profession{
+            margin-top: 5px;
+            @include sub-text();
+            display: block;
+        }
+    }    
+    .user__description{
+        padding:{
+            left: 46px;
+            top:6px;
+            bottom:9px;
+        } 
+        width: 363px;
+        height: 54px;
+        border: 1px solid $border-color;
+        border-radius: 4px; 
+        background-color:$description-bg-color; 
+        @include site-text();
+        position: absolute;
+        left: 87px;
+        top: 68px;
+    }
+    
+    
+}

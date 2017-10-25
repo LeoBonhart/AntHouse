@@ -1,0 +1,12 @@
+<div class="visitors" *ngFor="let item of model">
+    <span class="visitors__name">
+        {{item.name}}
+    </span>
+    <span class="visitors__date">
+        {{item.date | date:'d MMMM y'}}
+    </span>
+    <div class="visitors__text">
+        {{item.text}}
+        <div class="visitors__text_angle"></div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+@import "~sass/mixins.scss";
+
+.send{
+    width: 100%;
+    min-height: 193px;
+    background-color: $bg-send-area-color;
+    position: relative;
+    padding: {
+        right: 20px;
+        left: 20px; 
+        top:30px
+    }
+    .send__textarea{
+        border: $text-area-border;
+        box-shadow: $text-area-shadow;
+        display: block;
+        min-height: 65px;
+        width: 100%;
+        margin-bottom: 23px;
+        border-radius: 2px;
+        &:focus{
+            outline: none;
+        }
+    }
+    .send__button{
+        display: block;
+        $btn-h:42px;
+        background-color: $btn-color;
+        width: 280px;
+        height: 42px;
+        border: none;
+        border-radius: $btn-h/2;
+        @include site-text(bold);
+        transition: $transition; 
+        cursor: pointer;
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+            background-color: lighten($btn-color,10%);
+        }
+    }
+}
+
+  
